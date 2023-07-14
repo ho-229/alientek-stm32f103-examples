@@ -38,6 +38,7 @@ fn main() -> ! {
         PinState::High
     );
 
+    // Set beep to high (silence)
     let mut beep = gpiob
         .pb8
         .into_push_pull_output_with_state(&mut gpiob.crh, PinState::High);

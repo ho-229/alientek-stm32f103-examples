@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "target/thumbv7m-none-eabi/debug/blinky",
+            "name": "Debug with OpenOCD (blinky)",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32f1x.cfg"],
+            "searchDir": [],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+        },
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "target/thumbv7m-none-eabi/debug/beep",
+            "name": "Debug with OpenOCD (beep)",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32f1x.cfg"],
+            "searchDir": [],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+        },
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "target/thumbv7m-none-eabi/debug/keys",
+            "name": "Debug with OpenOCD (keys)",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32f1x.cfg"],
+            "searchDir": [],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+        }
+    ],
+}

@@ -3,4 +3,5 @@ members = [
     "blinky",
     "beep",
     "keys",
+    "serial-echo",
 ]

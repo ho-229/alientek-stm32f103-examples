@@ -16,6 +16,9 @@
             "runToEntryPoint": "main",
             "showDevDebugOutput": "none",
             "gdbPath": "/usr/bin/gdb-multiarch",
+            "preLaunchCommands": [
+                "monitor arm semihosting enable"
+            ]
         },
         {
             "cwd": "${workspaceRoot}",
@@ -29,6 +32,9 @@
             "runToEntryPoint": "main",
             "showDevDebugOutput": "none",
             "gdbPath": "/usr/bin/gdb-multiarch",
+            "preLaunchCommands": [
+                "monitor arm semihosting enable"
+            ]
         },
         {
             "cwd": "${workspaceRoot}",
@@ -42,6 +48,25 @@
             "runToEntryPoint": "main",
             "showDevDebugOutput": "none",
             "gdbPath": "/usr/bin/gdb-multiarch",
+            "preLaunchCommands": [
+                "monitor arm semihosting enable"
+            ]
+        },
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "target/thumbv7m-none-eabi/debug/serial-echo",
+            "name": "Debug with OpenOCD (serial-echo)",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32f1x.cfg"],
+            "searchDir": [],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "preLaunchCommands": [
+                "monitor arm semihosting enable"
+            ]
         }
     ],
 }

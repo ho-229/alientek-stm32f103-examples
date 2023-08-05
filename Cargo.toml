@@ -4,4 +4,5 @@ members = [
     "beep",
     "keys",
     "serial-echo",
+    "serial-echo-interrupt",
 ]

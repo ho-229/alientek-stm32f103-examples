@@ -15,7 +15,7 @@
             "searchDir": [],
             "runToEntryPoint": "main",
             "showDevDebugOutput": "none",
-            "gdbPath": "/usr/bin/gdb-multiarch",
+            // "gdbPath": "/usr/bin/gdb-multiarch",
             "preLaunchCommands": [
                 "monitor arm semihosting enable"
             ]
@@ -31,7 +31,7 @@
             "searchDir": [],
             "runToEntryPoint": "main",
             "showDevDebugOutput": "none",
-            "gdbPath": "/usr/bin/gdb-multiarch",
+            // "gdbPath": "/usr/bin/gdb-multiarch",
             "preLaunchCommands": [
                 "monitor arm semihosting enable"
             ]
@@ -47,7 +47,7 @@
             "searchDir": [],
             "runToEntryPoint": "main",
             "showDevDebugOutput": "none",
-            "gdbPath": "/usr/bin/gdb-multiarch",
+            // "gdbPath": "/usr/bin/gdb-multiarch",
             "preLaunchCommands": [
                 "monitor arm semihosting enable"
             ]
@@ -63,10 +63,26 @@
             "searchDir": [],
             "runToEntryPoint": "main",
             "showDevDebugOutput": "none",
-            "gdbPath": "/usr/bin/gdb-multiarch",
+            // "gdbPath": "/usr/bin/gdb-multiarch",
             "preLaunchCommands": [
                 "monitor arm semihosting enable"
             ]
-        }
+        },
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "target/thumbv7m-none-eabi/debug/serial-echo-interrupt",
+            "name": "Debug with OpenOCD (serial-echo-interrupt)",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32f1x.cfg"],
+            "searchDir": [],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            // "gdbPath": "/usr/bin/gdb-multiarch",
+            "preLaunchCommands": [
+                "monitor arm semihosting enable"
+            ]
+        },
     ],
 }

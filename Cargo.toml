@@ -5,4 +5,5 @@ members = [
     "keys",
     "serial-echo",
     "serial-echo-interrupt",
+    "keys-interrupt",
 ]

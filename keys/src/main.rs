@@ -46,7 +46,7 @@ fn main() -> ! {
     let key_up = gpioa.pa0.into_pull_down_input(&mut gpioa.crl);
 
     loop {
-        // anti shake
+        // debounce
         timer.delay(MicroSeconds::from_ticks(50_000));
 
         if key_up.is_high() {

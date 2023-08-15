@@ -26,6 +26,14 @@ macro_rules! config_interrupt {
     };
 }
 
+macro_rules! debounce {
+    ($timer:expr, $pin:expr) => {
+        while $pin.is_low() {}
+        $timer.delay_ms(50_u16);
+        $pin.clear_interrupt_pending_bit();
+    };
+}
+
 struct Context {
     timer: SysDelay,
     leds: [ErasedPin<Output>; 3],
@@ -110,8 +118,7 @@ unsafe fn EXTI2() {
     cortex_m::interrupt::free(|_| {
         let Some(ctx) = CTX.as_mut() else { return; };
         ctx.leds[2].toggle();
-        ctx.timer.delay_ms(10_u16);
-        ctx.key_2.clear_interrupt_pending_bit();
+        debounce!(ctx.timer, ctx.key_2);
     })
 }
 
@@ -122,11 +129,10 @@ unsafe fn EXTI9_5() {
         let Some(ctx) = CTX.as_mut() else { return; };
         if ctx.key_0.check_interrupt() {
             ctx.leds[0].toggle();
-            ctx.key_0.clear_interrupt_pending_bit();
+            debounce!(ctx.timer, ctx.key_0);
         } else if ctx.key_1.check_interrupt() {
             ctx.leds[1].toggle();
-            ctx.key_1.clear_interrupt_pending_bit();
+            debounce!(ctx.timer, ctx.key_1);
         }
-        ctx.timer.delay_ms(10_u16);
     })
 }

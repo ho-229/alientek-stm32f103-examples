@@ -6,4 +6,5 @@ members = [
     "serial-echo",
     "serial-echo-interrupt",
     "keys-interrupt",
+    "blinky-timer",
 ]

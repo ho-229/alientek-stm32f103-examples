@@ -7,4 +7,5 @@ members = [
     "serial-echo-interrupt",
     "keys-interrupt",
     "blinky-timer",
+    "servo-pwm",
 ]

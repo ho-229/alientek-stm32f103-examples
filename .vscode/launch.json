@@ -84,5 +84,21 @@
                 "monitor arm semihosting enable"
             ]
         },
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "target/thumbv7m-none-eabi/debug/servo-pwm",
+            "name": "Debug with OpenOCD (servo-pwm)",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32f1x.cfg"],
+            "searchDir": [],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            // "gdbPath": "/usr/bin/gdb-multiarch",
+            "preLaunchCommands": [
+                "monitor arm semihosting enable"
+            ]
+        },
     ],
 }

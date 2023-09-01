@@ -8,4 +8,5 @@ members = [
     "keys-interrupt",
     "blinky-timer",
     "servo-pwm",
+    "key-pwm-input",
 ]

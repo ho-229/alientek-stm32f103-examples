@@ -19,6 +19,5 @@ cargo flash --chip STM32F103RB -p <package> [--release]
 
 ## Debug
 
-- Install `OpenOCD` and `gdb-multiarch`(or `arm-none-eabi-gdb`) on your system.
+- Install `OpenOCD` and `arm-none-eabi-gdb`(or `gdb-multiarch`, which needs to be configured in `.vscode/launch.json`) on your system.
 - Install [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug) for VS Code.
-- Change `gdbPath` on `.vscode/launch.json` to your GDB path.
